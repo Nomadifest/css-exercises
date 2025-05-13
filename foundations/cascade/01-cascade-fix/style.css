@@ -8,16 +8,20 @@ body {
   font-weight: 800;
 }
 
-.small-para {
-  font-size: 14px;
-  font-weight: 800;
-}
+/* changed the order of the rules because both elements got the para class so the last rule counts */
 
 .para {
   font-size: 22px;
 }
 
-.confirm {
+.small-para {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* Added .confirm to specifically target the class selector and differentiate it from the other button, so the styles would be applied */
+
+.confirm.button {
   background: green;
   color: white;
   font-weight: bold;
@@ -29,7 +33,9 @@ body {
   font-size: 20px;
 }
 
-.child {
+/* here i targeted the child selector to get the styles applied by simply change the .child selector to .text .child the reason why it changed is because without the change they both have equal classes and the last one will rule the other, now the .text .child selector have more classes so it over rules the other selector and its more specific, still learning and need to get it to stick */
+
+.text .child {
   color: rgb(0, 0, 0);
   font-weight: 800;
   font-size: 14px;
@@ -40,3 +46,4 @@ div.text {
   font-size: 22px;
   font-weight: 100;
 }
+
